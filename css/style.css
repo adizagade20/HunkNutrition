@@ -144,7 +144,7 @@ header .navbar-default .navbar-header {
 .left-rs {}
 
 .navbar-brand>img {
-	width: 200px;
+	width: 170px;
 }
 
 .web-sh.navbar-form input {
@@ -172,7 +172,7 @@ header .navbar-default .navbar-header {
 
 .web-sh.navbar-form input::-moz-placeholder {
 	/* Firefox 19+ */
-	color #474747;
+	color: #474747;
 	opacity: 1;
 }
 
@@ -358,8 +358,8 @@ header .navbar-default .navbar-header {
 .box-img {
 	background: #ffffff;
 	text-align: center;
-	padding-bottom: 30px;
-	min-height: 370px;
+	padding-bottom: 10px;
+	min-height: 340px;
 	width: 220px;
 	margin-bottom: 30px;
 	position: relative;
@@ -374,25 +374,65 @@ header .navbar-default .navbar-header {
 
 .box-img>img,
 .productimage {
-	height:220px;
+	height: 220px;
 }
 
-.label_price{
+.label_price {
 	color: #000000;
 	padding-top: 10px;
 	font-size: 14px;
 	font-weight: bold;
 	transition: all 0.3s ease 0s;
 	letter-spacing: 0px;
+	text-align: center;
 }
 
-.label_price2{
+.label_price2 {
 	float: center;
 	color: #000000;
 	font-size: 14px;
 	font-weight: bold;
 	transition: all 0.3s ease 0s;
 	letter-spacing: 0px;
+	text-align: center;
+}
+
+.box-img-next {
+	background: #ffffff;
+	text-align: center;
+	padding-bottom: 10px;
+	min-height: 340px;
+	width: 220px;
+	margin-bottom: 30px;
+	position: relative;
+	transition: ease all 0.5s;
+}
+
+.box-img-next>img {
+	height: 150px;
+	width: 80px;
+}
+
+.box-img-column-1{
+	background: #ffffff;
+	text-align: center;
+	padding-bottom: 30px;
+	min-height: 340px;
+	width: 220px;
+	margin-bottom: 30px;
+	position: relative;
+	transition: ease all 0.5s;
+}
+
+.column-1-text {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.btn-warning {
+	font-size: 20px;
 }
 
 .food {
@@ -871,7 +911,7 @@ header .navbar-default .navbar-header {
 .help-box-f {}
 
 .help-box-f h4 {
-	color: #00000;
+	color: #000000;
 	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
@@ -2623,7 +2663,6 @@ html .ui-button.ui-state-disabled:active {
 
 .profile-pro-right .nav-tabs>li>a {
 	font-size: 16px;
-	font-weight: ;
 	color: #353334;
 	border: none;
 	border-bottom: 2px solid transparent;
