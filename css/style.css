@@ -102,84 +102,21 @@ textarea {
 -------------------------------------------------------------*/
 
 header .navbar {
-	border-radius: 0px;
-}
 
-#header.top-head {
-	background: #232937;
-}
-
-header .navbar-default {
-	background-color: transparent;
-	border: none;
-	margin-bottom: 0px;
-	position: relative;
-	-webkit-box-shadow: 0 15px 19px -19px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 15px 19px -19px rgba(0, 0, 0, 0.1);
-}
-
-header .navbar-default .navbar-header {
-	z-index: 1030;
-	position: relative;
+	min-height: 20px;
+	padding-top: 0px;
 }
 
 /*== Logo ==*/
 
 .navbar-brand {
 	padding: 0px 0px;
-	line-height: px;
-	border-left: 1px solid cyan;
-	border-right: 1px solid cyan;
+	line-height: 0px;
 }
-
-.web-sh.navbar-form {
-	padding: 13px 5px;
-	margin: 0px;
-	width: 60%;
-	border: none;
-}
-
-.left-rs {}
 
 .navbar-brand>img {
-	width: 100px;
+	height: 70px;
 }
-
-.web-sh.navbar-form input {
-	width: 90%;
-	background: none;
-	border: none;
-	box-shadow: none;
-	background-image: url("../images/search-icon.png");
-	background-repeat: no-repeat;
-	background-position: left;
-	padding-left: 40px;
-	color: #ffffff;
-	font-weight: 400;
-}
-
-.web-sh.navbar-form input::-webkit-input-placeholder {
-	/* Chrome */
-	color: #9e9393;
-}
-
-.web-sh.navbar-form input:-ms-input-placeholder {
-	/* IE 10+ */
-	color: #474747;
-}
-
-.web-sh.navbar-form input::-moz-placeholder {
-	/* Firefox 19+ */
-	color: #474747;
-	opacity: 1;
-}
-
-.web-sh.navbar-form input:-moz-placeholder {
-	/* Firefox 4 - 18 */
-	color: #474747;
-	opacity: 1;
-}
-
 
 
 /*------------------------------------------------------------- 
@@ -195,166 +132,8 @@ header .navbar-default .navbar-header {
 	background-position: center center;
 }
 
-.find-box {
-	max-width: 780px;
-	margin: 0 auto;
-	width: 100%;
-	padding: 92px 0px 75px 0px;
-}
-
-.find-box h1 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 500;
-	color: #fff;
-	font-size: 48px;
-	text-align: center;
-	padding-bottom: 22px;
-}
-
-.find-box h4 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 300;
-	color: #fff;
-	font-size: 22px;
-	text-align: center;
-	padding-bottom: 22px;
-}
-
-.product-sh {}
-
-.form-sh input {
-	background: none;
-	border: none;
-	border-bottom: 1px solid #ffffff;
-	width: 100%;
-	min-height: 55px;
-	color: #fff;
-	font-size: 22px;
-	font-weight: 300;
-}
-
-.form-sh input::-webkit-input-placeholder {
-	/* Chrome */
-	color: #ffffff;
-}
-
-.form-sh input:-ms-input-placeholder {
-	/* IE 10+ */
-	color: #ffffff;
-}
-
-.form-sh input::-moz-placeholder {
-	/* Firefox 19+ */
-	color: #ffffff;
-	opacity: 1;
-}
-
-.form-sh input:-moz-placeholder {
-	/* Firefox 4 - 18 */
-	color: #ffffff;
-	opacity: 1;
-}
-
-.form-sh .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-	width: 100%;
-}
-
-.form-sh .btn-default {
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid #fff;
-	border-radius: 0px;
-	color: #fff;
-	font-size: 22px;
-	font-weight: 300;
-	min-height: 55px;
-}
-
-.form-sh .open>.dropdown-toggle.btn-default:hover {
-	background-color: transparent;
-	color: #ffffff;
-}
-
-.form-sh .bootstrap-select .dropdown-toggle:focus {
-	border: none;
-	border-bottom: 1px solid #fff;
-	outline: none !important;
-}
-
-.btn-group.open .dropdown-toggle {
-	box-shadow: none;
-}
-
-.form-sh .btn-default.active,
-.form-sh .btn-default:active,
-.form-sh .open>.dropdown-toggle.btn-default {
-	background-color: transparent;
-	color: #fff;
-}
-
-.form-sh .dropup .dropdown-menu,
-.form-sh .navbar-fixed-bottom .dropdown .dropdown-menu {
-	margin: 0px;
-	border-radius: 0px;
-}
-
-.form-sh .dropdown-menu {
-	margin: 0px;
-	border-radius: 0px;
-}
-
-.form-sh a.btn {
-	background: #1d99ff;
-	color: #ffffff;
-	min-height: 55px;
-	width: 100%;
-	line-height: 38px;
-	font-size: 22px;
-	font-weight: 500;
-	border-radius: 3px;
-}
-
-.form-sh a.btn:hover {
-	color: #fff;
-	background-color: #007dea;
-	border-color: #0077e0;
-}
-
-.form-sh .bootstrap-select.btn-group .dropdown-menu {
-	background: #09294c;
-	padding: 0px;
-}
-
-.form-sh .bootstrap-select.btn-group .dropdown-menu li a {
-	color: #fff;
-	padding: 10px 15px;
-}
-
-.form-sh .bootstrap-select.btn-group .dropdown-menu li a:hover,
-.form-sh .bootstrap-select.btn-group .dropdown-menu li a:focus {
-	background: #1d99ff;
-}
-
-.product-sh p {
-	clear: both;
-	margin: 0px;
-	text-align: center;
-	padding-top: 30px;
-	color: #ddd;
-	font-size: 16px;
-}
-
-.product-sh p a {
-	color: #007dea;
-}
-
-.product-sh p a:hover,
-.product-sh p a:focus {
-	color: #007dea;
-}
-
 .box-img {
-	background: #ffffff;
+	background: transparent;
 	text-align: center;
 	padding-bottom: 10px;
 	min-height: 340px;
@@ -362,11 +141,12 @@ header .navbar-default .navbar-header {
 	margin-bottom: 30px;
 	position: relative;
 	transition: ease all 0.5s;
+	border: 1px dotted red;
 }
 
 .box-img:hover {
 	cursor: pointer;
-	transform: scale(1.05);
+	transform: scale(1.1);
 	background: #007dea;
 }
 
@@ -396,7 +176,7 @@ header .navbar-default .navbar-header {
 }
 
 .box-img-next {
-	background: #ffffff;
+	background: transparent;
 	text-align: center;
 	padding-bottom: 10px;
 	min-height: 340px;
@@ -412,7 +192,7 @@ header .navbar-default .navbar-header {
 }
 
 .box-img-column-1{
-	background: #ffffff;
+	background: transparent;
 	text-align: center;
 	padding-bottom: 30px;
 	min-height: 340px;

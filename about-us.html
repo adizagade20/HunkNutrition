@@ -4,77 +4,64 @@
 		<meta charset="UTF-8">
 		<title>Hunk Nutrition</title>
 		<link rel='shortcut icon' href='images/logo.ico' type='image/x-icon' />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!--fontawesome css-->
-		<!--	<link rel="stylesheet" href="css/font-awesome.min.css">-->
-	  	<!--bootstrap css-->
-		<link rel="stylesheet" href="css/bootstrap2.min.css">
-	  	<!--animate css-->
-		<!--	<link rel="stylesheet" href="css/animate-wow.css">-->
-		<!--main css-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
-		<!--	<link rel="stylesheet" href="css/bootstrap-select.min.css">-->
-		<!--	<link rel="stylesheet" href="css/slick.min.css">-->
-		<!--responsive css-->
-		<link rel="stylesheet" href="css/responsive.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
 		<link href="https://fonts.googleapis.com/css?family=Raleway:600|Work+Sans" rel="stylesheet">
 		<link href="css/card.css" rel="stylesheet">
 	</head>
 
 
-
-
-   <body>
+	<body style="height: 1000px">
 		<header id="header" class="top-head">
-			<nav class="navbar navbar-default">
-			<div class="container-fluid">
-			<div class="row">
-					<div class="col-md-4 col-sm-12 left-rs">
-						<div class="navbar-header">
-							<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="" /></a>
-						</div>
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
 					</div>
+
 					<div>
-						<form class="navbar-form navbar-left web-sh">
-						<div class="form">
-							<input type="text" class="form-control" placeholder="Search for products or companies">
-							<a class="custom-b" href="#">Sign up</a>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						</ul>
+					</div>
+
+					<div>
+					<form class="navbar-form navbar-right" action="/action_page.php">
+						<div class="input-group">
+							<input style="width: 400px" type="text" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit" style="margin-right: 100px">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
 						</div>
 						</form>
 					</div>
+					
+					<div>
+						<ul class="nav navbar-nav" style="margin-left: 200px">
+							<li><a href="#">Home</a></li>
+							<li><a href="product-category-protein.html">Trending in Proteins</a></li>
+							<li><a href="product-category-gainers.html">Trending in Gainers</a></li>
+							<li><a href="product-category-amino.html">Trending in Aminos/BCCA</a></li>
+							<li><a href="product-category-vitamins.html">Trending in Vitamins</a></li>
+							<li><a href="product-category-omega-3.html">Trending in omega-3</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="menubar">
-					<ul class="nav nav-tabs" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link " data-toggle="tab" href="#home"><i class="fas fa-home">Home</i></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#reg"><i class="fas fa-address-card">Register</i></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#cus"><i class="fas fa-address-card">Customers</i></a>
-						</li>
-					</ul>
-				</div>
-			</div>			   
-			</nav>
+			</nav>		
 		</header>
-
-
-
-
-
 
 
 
 		<div class="col-lg-4">
 			<div class="card">
 				<div class="info">
-					<div class="name">Aditya Zagade</div>
+					<div class="name ">Aditya Zagade</div>
 					<div class="prof">Faltu Designer</div>
 					<div class="divider"></div>
 					<div class="bio">I'm Aditya, from Ashti, Beed.</div>
@@ -87,7 +74,7 @@
 		<div class="col-lg-4">
 			<div class="card">
 				<div class="info">
-					<div class="name">Akash yadav</div>
+					<div class="name paper">Akash yadav</div>
 					<div class="prof">Full time Designer</div>
 					<div class="divider"></div>
 					<div class="bio">I'm Akash, lover of "pushpa".</div>
@@ -100,7 +87,7 @@
 		<div class="col-lg-4">
 			<div class="card">
 				<div class="info">
-					<div class="name">Mrs. Pooja</div>
+					<div class="name paper">Mrs. Pooja</div>
 					<div class="prof">Chutiya</div>
 					<div class="divider"></div>
 					<div class="bio">I'm Sarthak, my secret is, I call boys daily and do adult chat with them.</div>
