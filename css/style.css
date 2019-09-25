@@ -126,12 +126,10 @@ header .navbar-default .navbar-header {
 /*== Logo ==*/
 
 .navbar-brand {
-	float: left;
 	padding: 0px 0px;
-	font-size: 18px;
 	line-height: px;
-	height: 66px;
-	border-right: 1px solid #e8e8e8;
+	border-left: 1px solid cyan;
+	border-right: 1px solid cyan;
 }
 
 .web-sh.navbar-form {
@@ -144,7 +142,7 @@ header .navbar-default .navbar-header {
 .left-rs {}
 
 .navbar-brand>img {
-	width: 170px;
+	width: 100px;
 }
 
 .web-sh.navbar-form input {
@@ -2693,9 +2691,14 @@ html .ui-button.ui-state-disabled:active {
 	border-bottom: none;
 }
 
-.menubar{
-	padding-left: 300px;
+.menubar {
+	padding-left: 200px;
 }
+
+.btn-primary {
+	background-color: transparent;
+}
+
 .right-t {}
 
 .profile-pro-right .panel-default .panel-body {
