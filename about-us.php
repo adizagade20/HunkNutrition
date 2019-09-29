@@ -36,7 +36,7 @@
 							<div class="input-group">
 								<input style="width: 400px; height: 30px" type="text" class="form-control" placeholder="Search">
 								<div class="input-group-btn">
-									<button class="btn btn-default" type="submit" style="margin-right: 100px; height: 30px;">
+									<button class="btn btn-default" type="submit" style="margin-right: 100px; height: 30px; margin-top: 30px">
 										<i class="glyphicon glyphicon-search" ></i>
 									</button>
 								</div>
@@ -45,7 +45,7 @@
 						</div>
 						
 						<div>
-							<ul class="nav navbar-nav" style="margin-left: 200px;">
+							<ul class="nav navbar-nav" style="margin-left: 200px; margin-top: -30px">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="product-category-protein.php">Trending in Proteins</a></li>
 								<li><a href="product-category-gainers.php">Trending in Gainers</a></li>
@@ -53,7 +53,7 @@
 								<li><a href="product-category-vitamins.php">Trending in Vitamins</a></li>
 								<li><a href="product-category-omega-3.php">Trending in omega-3</a></li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
+							<ul class="nav navbar-nav navbar-right" style="margin-top: -30px">
 								<li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart" ></span>
 									<p style="display: inline">&nbspCart</p>
 								</a><li>
@@ -67,11 +67,13 @@
 			<div class="col-lg-4">
 				<div class="card">
 					<div class="info">
-						<div class="name ">Aditya Zagade</div>
+						<div class="name">Aditya A. Zagade</div>
 						<div class="prof">Faltu Designer</div>
 						<div class="divider"></div>
 						<div class="bio">I'm Aditya, from Ashti, Beed.</div>
-						<button>Contact ME</button>
+						<form action="https://instagram.com/adi_zagade/">
+							<button class="btn btn-warning"><p class="btn-text">Contact Me</p></button>
+						</form>
 					</div>
 					<div class="photo1"></div>
 				</div>
@@ -80,11 +82,13 @@
 			<div class="col-lg-4">
 				<div class="card">
 					<div class="info">
-						<div class="name paper">Akash yadav</div>
-						<div class="prof">Full time Designer</div>
+						<div class="name">Akash S. yadav</div>
+						<div class="prof">Expert Web Designer</div>
 						<div class="divider"></div>
-						<div class="bio">I'm Akash, lover of "pushpa".</div>
-						<button>Contact ME</button>
+						<div class="bio">I'm Akash, from Chembur, Mumbai.</div>
+						<form action="https://www.instagram.com/_yadav_akash_/">
+							<button class="btn btn-warning"><p class="btn-text">Contact Me</p></button>
+						</form>
 					</div>
 					<div class="photo2"></div>
 				</div>
@@ -93,11 +97,13 @@
 			<div class="col-lg-4">
 				<div class="card">
 					<div class="info">
-						<div class="name paper">Mrs. Pooja</div>
-						<div class="prof">Chutiya</div>
+						<div class="name">Sarhak S. Tukan</div>
+						<div class="prof">Expert Web Designer</div>
 						<div class="divider"></div>
-						<div class="bio">I'm Sarthak, my secret is, I call boys daily and do adult chat with them.</div>
-						<button>Contact ME</button>
+						<div class="bio">I'm Sarthak, from Kopar Khairane, Navi Mumbai.</div>
+						<form action="https://www.instagram.com/mr.kukku/">
+							<button class="btn btn-warning"><p class="btn-text">Contact Me</p></button>
+						</form>
 					</div>
 					<div class="photo3"></div>
 				</div>
