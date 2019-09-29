@@ -1,0 +1,110 @@
+.body {
+	width: 100%;
+}
+
+
+.navbar-brand {
+	line-height: 0px;
+}
+
+.navbar-brand>img {
+	margin-top: -10px;
+	height: 70px;
+}
+
+
+
+
+
+
+
+
+
+.main-footer {
+	padding: 50px 0px 0px 0px;
+	background-size: cover;
+	background-position: center center;
+}
+
+.footer-top {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #12345b;
+}
+
+.form-box {
+	position: relative;
+	margin-right: 15px;
+}
+
+.form-box input {
+	width: 100%;
+	box-sizing: border-box;
+	background: #fff;
+	color: #646464;
+	min-height: 51px;
+	border-radius: 2px;
+	padding-left: 30px;
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	padding-right: 140px;
+	border-radius: 50px;
+}
+
+.form-box button {
+	border: none;
+	background: #1d99ff;
+	color: #fff;
+	padding: 11px 35px 11px;
+	border-radius: 2px;
+	font-weight: 600;
+	font-size: 16px;
+	position: absolute;
+	right: 5px;
+	top: 4px;
+	border-radius: 50px;
+}
+
+.form-box button:hover {
+	background-color: #007dea;
+}
+
+.help-box-f h4 {
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0px;
+	padding-bottom: 6px;
+	font-weight: bold;
+}
+
+.help-box-f p {
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0px;
+	padding-top: 3px;
+	font-weight: bold;
+}
+
+.footer-link-box {
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+
+/*-- Copyright --*/
+
+.copyright {
+	background: #ffffff;
+}
+
+.copyright p {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #636363;
+}
+
+.copyright p img {
+	margin-right: 20px;
+}

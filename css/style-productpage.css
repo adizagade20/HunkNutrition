@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	margin: 0px;
+	overflow-x: hidden;
+	padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+	-webkit-text-decoration: none;
+	-moz-text-decoration: none;
+	-ms-text-decoration: none;
+	-o-text-decoration: none;
+	text-decoration: none;
+	transition: ease all 0.5s;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+textarea {
+	outline: none;
+	border: none;
+	resize: none;
+}
+
+
+
+
+
+.gold{
+	color: #FFBF00;
+}
+
+.product{
+	border: 1px solid #dddddd;
+	height: 321px;
+}
+
+.product>img{
+	max-width: 230px;
+	max-height: 200px;
+}
+
+.largeimage{
+	max-width: 320px;
+	max-height: 320px;
+	min-width:310px;
+	min-height:310px;
+}
+
+.product-rating{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.product-title{
+	padding-top: 40px;
+	font-size: 20px;
+}
+
+.product-desc{
+	font-size: 14px;
+}
+
+.product-price{
+	font-size: 22px;
+}
+
+.product-stock{
+	color: #74DF00;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.product-info{
+		margin-top: 50px;
+}
+
+.btn-success>p{
+	margin: 0px;
+	font-size: 22px;
+}
+
+.content-wrapper {
+	max-width: 1140px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.container-fluid{
+	margin: 0 auto;
+}
+
+.view-wrapper {
+	float: right;
+	max-width: 70%;
+	margin-top: 25px;
+}
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	max-width: 100%;
+}
+
+.service1-items {
+	padding: 0px 0 0px 0;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	height: 321px;
+	width: 130px;
+}
+
+.service1-item {
+	height: 105px;
+	width: 120px;
+	display: block;
+	float: left;
+	position: relative;
+	padding-right: 20px;
+	margin-bottom: 3px;
+	border-right: 1px solid #DDD;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+}
+
+.service1-item > img {
+	max-height: 100px;
+	max-width: 100px;
+	transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+}
+
+.service-image-left {
+	padding-right: 10px;
+}
+
+.service-image-right {
+	padding-left: 50px;
+}
+
+.service-image-left > center > img,.service-image-right > center > img{
+	height: 355px;
+}
