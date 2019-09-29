@@ -219,7 +219,7 @@
 									</button>
 								</td>
 								<td>
-									<a href="https://paypal.me/adizagade20?locale.x=en_GB">
+									<a href="https://paypal.me/adizagade20/'.$total.'">
 										<button type="button" class="btn btn-success">
 											Checkout <span class="glyphicon glyphicon-play"></span>
 										</button>
