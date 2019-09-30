@@ -72,13 +72,14 @@ textarea {
 	position: relative;
 	transition: ease all 0.5s;
 	vertical-align: middle;
-
+	margin-top: 10px;
 }
 
 .box-img:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-	background: #007dea;
+	background: linear-gradient(to right, #00dbde, #00dbde, #fc00ff, #fc00ff);
+	border-top: 1px solid #fc00ff;
 }
 
 .box-img>img,

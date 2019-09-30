@@ -1,58 +1,11 @@
-<?php require('mysqlconnect.php');
-
-function test_input($data)
-{
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return $data;
-}
-
-$conn = new mysqli('localhost', 'root', 'root');
-
-if(isset($_POST['username']) and isset($_POST['password']))
-{
-	$username = $_POST['username']; 
-	$password = $_POST['password'];
-	$username = stripslashes($username);
-	$password = stripslashes($password);
-	
-	$username = test_input($username);
-	$password = test_input($password);
-
-	
-	$sql="SELECT * FROM products.credentials WHERE username = '$username' and password = '$password'";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0)
-	{
-		while($row = $result->fetch_assoc())
-		{}
-		$_SESSION['loggedin'] = true;
-		$_SESSION['username'] = $username;
-		echo "<script> window.location.assign('index.php'); </script>";
-	}
-	else {
-		echo '<script>
-				alert("Combination of Username and Password is wrong, Please try again!");
-			</script>';
-	}
-}
-?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V4</title>
 	<meta charset="UTF-8">
 	<meta href="https://www.instagram.com/p/BumHw99Brba/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<title>Hunk Nutrition</title>
+	<link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="css/style-login.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -63,7 +16,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 
 <body>
 	<div>
-		<form autocomplete="off" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+		<form autocomplete="off" action="login-verify.php" method="post">
 		<div class="container-login100">
 			<div class="wrap-login100" style= "padding: 20px; padding-left: 50px; padding-right: 50px;">
 					<div class="login100-form-title p-b-49">

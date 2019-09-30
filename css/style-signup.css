@@ -258,3 +258,9 @@ button {
   color: #fff;
   background-color: #333333;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
