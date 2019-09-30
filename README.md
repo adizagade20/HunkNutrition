@@ -69,6 +69,41 @@ mysql> describe gainers;
 +---------------+--------------+------+-----+---------+----------------+
 11 rows in set (0.00 sec)
 
+mysql> describe omega;
+
+{ 
+	CREATE TABLE `omega` (
+	`id` int(10) NOT NULL AUTO_INCREMENT,
+	`pname` varchar(255) NOT NULL,
+	`originalprice` int(10) DEFAULT NULL,
+	`soldprice` int(10) NOT NULL,
+	`imgsrc` varchar(255) NOT NULL,
+	`category` varchar(255) NOT NULL,
+	`image1` varchar(255) DEFAULT NULL,
+	`image2` varchar(255) DEFAULT NULL,
+	`image3` varchar(255) DEFAULT NULL,
+	`desc` mediumtext,
+	`productinfo` mediumtext,
+	PRIMARY KEY (`id`)
+	)
+}
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int(10)      | NO   | PRI | NULL    | auto_increment |
+| pname         | varchar(255) | NO   |     | NULL    |                |
+| originalprice | int(10)      | YES  |     | NULL    |                |
+| soldprice     | int(10)      | NO   |     | NULL    |                |
+| imgsrc        | varchar(255) | NO   |     | NULL    |                |
+| category      | varchar(255) | NO   |     | NULL    |                |
+| image1        | varchar(255) | YES  |     | NULL    |                |
+| image2        | varchar(255) | YES  |     | NULL    |                |
+| image3        | varchar(255) | YES  |     | NULL    |                |
+| desc          | mediumtext   | YES  |     | NULL    |                |
+| productinfo   | mediumtext   | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.05 sec)
+
 mysql> describe proteins;
 {
 	CREATE TABLE `proteins` (

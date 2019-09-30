@@ -1,13 +1,3 @@
-<?php require('mysqlconnect.php');
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
-	{
-
-	}
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -39,14 +29,26 @@
 							<a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""></a>
 						</div>
 
-						<div>
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>
-								<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>
-										<p id="loginbutton" style="display: inline"> &nbspLogin</p>
-								</a></li>
-							</ul>
-						</div>
+<?php require('mysqlconnect.php');
+						echo '<div  style="margin-top: -20px">';
+							echo '<ul class="nav navbar-nav navbar-right">';
+								echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>';
+
+								if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+								{
+									echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogout</p>';
+									echo '</a></li>';
+								}
+								else
+								{
+									echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogin</p>';
+									echo '</a></li>';
+								}
+							echo '</ul>';
+						echo '</div>';
+?>
 
 						<div>
 						<form class="navbar-form navbar-right" action="/action_page.php">
@@ -62,15 +64,17 @@
 						</div>
 						
 						<div>
-							<ul class="nav navbar-nav" style="margin-left: 200px;">
+							<ul class="nav navbar-nav" style="margin-left: 60px;">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="product-category-protein.php">Trending in Proteins</a></li>
 								<li><a href="product-category-gainers.php">Trending in Gainers</a></li>
 								<li class="active"><a href="product-category-amino.php">Trending in Aminos/BCCA</a></li>
 								<li><a href="product-category-vitamins.php">Trending in Vitamins</a></li>
-								<li><a href="product-category-omega-3.php">Trending in omega-3</a></li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
+							<ul class="nav navbar-nav navbar-right" style="margin-left: 120px; margin-right: 0px; margin-top: -5px;">
+								<li>
+									<a href="about-us.php"><span>About-Us</span></a>
+								</li>
 								<li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart" ></span>
 									<p style="display: inline">&nbspCart</p>
 								</a><li>
@@ -124,7 +128,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="footer-top clearfix">
-								<div class="col-lg-1"></div>
+								
 								<div class="col-lg-6">
 									<div class="form-box">
 										<input type="text" placeholder="Enter your e-mail to get periodic updates" />
@@ -144,14 +148,17 @@
 					<div class="copyright">
 						<div class="container">
 							<div class="row">
-								<div class="col-lg-3">
+								<div class="col-lg-7"></div>
+								<div class="col-lg-5">
 									<p><img width="90" src="images/logo.png" style="margin-top: -5px;" /> All Rights Reserved. Company Name © 2019</p>
 								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
+
 
 
 

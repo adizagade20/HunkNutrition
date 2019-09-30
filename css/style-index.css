@@ -75,7 +75,7 @@ textarea {
 
 .box-img:hover {
 	cursor: pointer;
-	transform: scale(1);
+	transform: scale(1.05);
 	background: #007dea;
 }
 

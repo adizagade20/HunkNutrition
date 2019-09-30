@@ -70,6 +70,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 						Login
 					</div>
 					<br>
+					
 					<div class="wrap-input100 validate-input m-b-23">
 						<div class="label-input100">Username</div>
 						<input id="uid" class="input100" type="text" placeholder="Type your email ID" name="username">

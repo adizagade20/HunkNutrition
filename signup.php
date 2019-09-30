@@ -1,254 +1,168 @@
+<?php require('mysqlconnect.php');
+
+function test_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+$conn = new mysqli('localhost', 'root', 'root');
+
+if(isset($_POST['username']) and isset($_POST['password']))
+{
+	$username = $_POST['username']; 
+	$password = $_POST['password'];
+	$username = stripslashes($username);
+	$password = stripslashes($password);
+	
+	$username = test_input($username);
+	$password = test_input($password);
+
+	
+	$sql="SELECT * FROM products.credentials WHERE username = '$username' and password = '$password'";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0)
+	{
+		while($row = $result->fetch_assoc())
+		{}
+		$_SESSION['loggedin'] = true;
+		$_SESSION['username'] = $username;
+		echo "<script> window.location.assign('index.php'); </script>";
+	}
+	else {
+		echo '<script>
+				alert("Combination of Username and Password is wrong, Please try again!");
+			</script>';
+	}
+}
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Hunk Nutrition</title>
-		<link rel='shortcut icon' href='images/logo.ico' type='image/x-icon' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<html lang="en">
+<head>
+	<title>Login V4</title>
+	<meta charset="UTF-8">
+	<meta href="https://www.instagram.com/p/BumHw99Brba/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/style-signup.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-		<style>
-			* {
-			box-sizing: border-box;
-			}
 
-			body {
-				background-color: #f1f1f1;
-			}
+<body>
+	<div>
+		<form autocomplete="off" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+		<div class="container-login100">
+			<div class="wrap-login100" style= "float:center; padding-top: 20px">
+					<div class="login100-form-title p-b-49">
+						Sign up
+					</div>
+					<br><br>
 
-			#regForm {
-				background-color: #ffffff;
-				margin: 100px auto;
-				font-family: Raleway;
-				padding: 40px;
-				width: 70%;
-				min-width: 300px;
-			}
+					<div class="wrap-input100 validate-input">
+						<div class="label-input100">What is your Name :</div>
+						<input id="name" class="input100" type="text" placeholder="Narendra Damodardas Modi" name="name">
+						<div class="focus-input100"></div>
+					</div>
 
-			h1 {
-				text-align: center;  
-			}
+					<div class="wrap-input100 validate-input" style="padding-top: 20px;">
+						<div class="label-input100">Email :</div>
+						<input id="pass" class="input100" type="date" placeholder="" name="dob">
+						<div class="focus-input100"></div>
+					</div>
 
-			input {
-				padding: 10px;
-				width: 100%;
-				font-size: 17px;
-				font-family: Raleway;
-				border: 1px solid #aaaaaa;
-			}
+					<div class="wrap-input100 validate-input" style="padding-top: 20px; padding-bottom: 15px">
+						<div class="label-input100">Gender :</div>
+						<div style="padding-top: 15px">
+							<label class="radio-inline" style="padding-left: 60px"><input type="radio" name="gender" checked>Male</label>
+							<label class="radio-inline" style="padding-left: 30px"><input type="radio" name="gender">Female</label>
+							<label class="radio-inline" style="padding-left: 30px"><input type="radio" name="gender">Other</label>
+						</div>
+					</div>
 
-			/* Mark input boxes that gets an error on validation: */
-			input.invalid {
-				background-color: #ffdddd;
-			}
+					<div class="wrap-input100 validate-input"  style="padding-top: 20px">
+						<div class="label-input100">Email</div>
+						<input id="uid" class="input100" type="email" placeholder="Type your email ID" name="username">
+						<div class="focus-input100">
+							<img src="images/username.png" style="width: 30px; padding-top: 58px; padding-left: 10px">
+						</div>
+					</div>
 
-			/* Hide all steps by default: */
-			.tab {
-				display: none;
-			}
-
-			button {
-				background-color: #4CAF50;
-				color: #ffffff;
-				border: none;
-				padding: 10px 20px;
-				font-size: 17px;
-				font-family: Raleway;
-				cursor: pointer;
-			}
-
-			button:hover {
-				opacity: 0.8;
-			}
-
-			#prevBtn {
-				background-color: #bbbbbb;
-			}
-
-			/* Make circles that indicate the steps of the form: */
-			.step {
-				height: 15px;
-				width: 15px;
-				margin: 0 2px;
-				background-color: #bbbbbb;
-				border: none;  
-				border-radius: 50%;
-				display: inline-block;
-				opacity: 0.5;
-			}
-
-			.step.active {
-				opacity: 1;
-			}
-
-			/* Mark the steps that are finished and valid: */
-			.step.finish {
-				background-color: #4CAF50;
-			}
+					<div class="wrap-input100 validate-input" style="padding-top: 20px">
+						<div class="label-input100">Password</div>
+						<input id="uid" class="input100" type="text" placeholder="************	" name="username">
+						<div class="focus-input100">
+							<img src="images/password.png" style="width: 30px; padding-top: 55px; padding-left: 10px; opacity: 0.5">
+						</div>
+					</div>
+					<h6 style="opacity: 0.6">Password must contain Uppercase, Lowercase, Number and Special character</h6>
 
 
 
 
-			.paper {
-				background: #ffffff;
-				padding: 30px;
-				position: relative;
-			}
-
-			.paper,
-			.paper::before,
-			.paper::after {
-				box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
-				border: 1px solid #bbbbbb;
-			}
-
-			.paper::before,
-			.paper::after {
-				content: "";
-				position: absolute;
-				height: 95%;
-				width: 95;
-				background-color: #eeeeee;
-			}
-
-			.paper::before {
-				right: 15px;
-				top: 0;
-				transform: rotate(-1deg);
-				z-index: -1;
-			}
-
-			.paper::after {
-				top: 5px;
-				right: -5px;
-				transform: rotate(1deg);
-				z-index: -2;
-			}
-
-			body {
-				background: #;
-				padding: 3em;
-			}
-
-		</style>
-	</head>
 
 
 
 
-	<body background="login/bg.jpg">
-		<form autocomplete="off" id="regForm" action="index.php">
-			<h1>Register:</h1>
-			<!-- One "tab" for each step in the form: -->
-			<div class="tab">Name:
-				<p><input type="text" placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-				<p><input type="text" placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+
+
+					
+					<div class="text-right" style="padding-top: 10px; padding-bottom: 10px">
+						<a href="signup.php">
+							Forgot password?
+						</a>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">Login</button>
+						</div>
+					</div>
+
+					<div class="txt1 text-center p-t-54 p-b-20" style="padding-top: 20px;">
+						<span>Or Sign Up Using</span>
+					</div>
+
+					<div style="text-align: center">
+						<a href="signup.php" class="login100-social-item bg1" style="margin: 30px">
+							<i class="fa fa-facebook"></i>
+						</a>
+						
+						<a href="signup.php" class="login100-social-item bg2" style="margin: 20px">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+						<a href="signup.php" class="login100-social-item bg3" style="margin: 30px">
+							<i class="fa fa-google"></i>
+						</a>
+					</div>
+
+
+					<div class="flex-col-c" style="text-align: center;">
+						<span>
+							Or Sign Up Using
+						</span>
+
+						<a href="signup.php">
+							<h3 style="color: blue; opacity: 0.5; margin-bottom: 0px">Email</h3>
+						</a>
+					</div>
 			</div>
-			<div class="tab">Contact Info:
-				<p><input type="email" placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-				<p><input type="text" placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-			</div>
-			<div class="tab">Birth Date:
-				<p><input placeholder="Date 'DD'" oninput="this.className = ''" name="day 'DD'"></p>
-				<p><input placeholder="Month 'MM'" oninput="this.className = ''" name="Month 'MM'"></p>
-				<p><input placeholder="Year 'YYYY'" oninput="this.className = ''" name="Year 'YYYY'"></p>
-			</div>
-			<div class="tab">Login Info:
-				<p><input placeholder="Username..." oninput="this.className = ''" name="Username"></p>
-				<p><input placeholder="Password..." oninput="this.className = ''" name="Password" type="password"></p>
-			</div>
-			<div style="overflow:auto;">
-				<div style="float:right;">
-					<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-					<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-				</div>
-			</div>
-
-			<div style="text-align:center;margin-top:40px;">
-				<span class="step"></span>
-				<span class="step"></span>
-				<span class="step"></span>
-				<span class="step"></span>
-			</div>
+		</div>
 		</form>
-
-		<script>
-			var currentTab = 0; // Current tab is set to be the first tab (0)
-			showTab(currentTab); // Display the current tab
-
-			function showTab(n) {
-			// This function will display the specified tab of the form...
-			var x = document.getElementsByClassName("tab");
-			x[n].style.display = "block";
-			//... and fix the Previous/Next buttons:
-			if (n == 0) {
-				document.getElementById("prevBtn").style.display = "none";
-			} else {
-				document.getElementById("prevBtn").style.display = "inline";
-			}
-			if (n == (x.length - 1)) {
-				document.getElementById("nextBtn").innerHTML = "Submit";
-			} else {
-				document.getElementById("nextBtn").innerHTML = "Next";
-			}
-			//... and run a function that will display the correct step indicator:
-			fixStepIndicator(n)
-			}
-
-			function nextPrev(n) {
-			// This function will figure out which tab to display
-			var x = document.getElementsByClassName("tab");
-			// Exit the function if any field in the current tab is invalid:
-			if (n == 1 && !validateForm()) return false;
-			// Hide the current tab:
-			x[currentTab].style.display = "none";
-			// Increase or decrease the current tab by 1:
-			currentTab = currentTab + n;
-			// if you have reached the end of the form...
-			if (currentTab >= x.length) {
-				// ... the form gets submitted:
-				document.getElementById("regForm").submit();
-				return false;
-			}
-			// Otherwise, display the correct tab:
-			showTab(currentTab);
-			}
-
-			function validateForm() {
-			// This function deals with validation of the form fields
-			var x, y, i, valid = true;
-			x = document.getElementsByClassName("tab");
-			y = x[currentTab].getElementsByTagName("input");
-			// A loop that checks every input field in the current tab:
-			for (i = 0; i < y.length; i++) {
-				// If a field is empty...
-				if (y[i].value == "") {
-				// add an "invalid" class to the field:
-				y[i].className += " invalid";
-				// and set the current valid status to false
-				valid = false;
-				}
-			}
-			// If the valid status is true, mark the step as finished and valid:
-			if (valid) {
-				document.getElementsByClassName("step")[currentTab].className += " finish";
-			}
-			return valid; // return the valid status
-			}
-
-			function fixStepIndicator(n) {
-			// This function removes the "active" class of all steps...
-			var i, x = document.getElementsByClassName("step");
-			for (i = 0; i < x.length; i++) {
-				x[i].className = x[i].className.replace(" active", "");
-			}
-			//... and adds the "active" class on the current step:
-			x[n].className += " active";
-			}
-		</script>
-	</body>
+	</div>
+</body>
 </html>

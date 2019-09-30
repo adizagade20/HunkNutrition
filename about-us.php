@@ -15,21 +15,33 @@
 
 
 	<body>
-			<header id="header" class="top-head">
+	<header id="header" class="top-head">
 				<nav class="navbar navbar-inverse">
 					<div class="container-fluid">
 						<div class="navbar-header">
 							<a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""></a>
 						</div>
 
-						<div>
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>
-								<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>
-										<p id="loginbutton" style="display: inline"> &nbspLogin</p>
-								</a></li>
-							</ul>
-						</div>
+<?php require('mysqlconnect.php');
+						echo '<div  style="margin-top: -20px">';
+							echo '<ul class="nav navbar-nav navbar-right">';
+								echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>';
+
+								if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+								{
+									echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogout</p>';
+									echo '</a></li>';
+								}
+								else
+								{
+									echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogin</p>';
+									echo '</a></li>';
+								}
+							echo '</ul>';
+						echo '</div>';
+?>
 
 						<div>
 						<form class="navbar-form navbar-right" action="/action_page.php">
@@ -45,15 +57,17 @@
 						</div>
 						
 						<div>
-							<ul class="nav navbar-nav" style="margin-left: 200px; margin-top: -30px">
+							<ul class="nav navbar-nav" style="margin-left: 243px; margin-top: -30px">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="product-category-protein.php">Trending in Proteins</a></li>
 								<li><a href="product-category-gainers.php">Trending in Gainers</a></li>
 								<li><a href="product-category-amino.php">Trending in Aminos/BCCA</a></li>
 								<li><a href="product-category-vitamins.php">Trending in Vitamins</a></li>
-								<li><a href="product-category-omega-3.php">Trending in omega-3</a></li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right" style="margin-top: -30px">
+							<ul class="nav navbar-nav navbar-right" style="margin-right: 0px; margin-left: 120px; margin-top: -30px">
+								<li class="active">
+									<a href="about-us.php"><span>About-Us</span></a>
+								</li>
 								<li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart" ></span>
 									<p style="display: inline">&nbspCart</p>
 								</a><li>

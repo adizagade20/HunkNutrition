@@ -14,10 +14,10 @@
 		#echo ("Connected Succesfully ");
 	}
 
-	session_start();
-	#echo session_id();
-	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+	if(session_status()==2)
+	{	}
+	else
 	{
-		#echo $_SESSION["username"];
+		session_start();
 	}
 ?>

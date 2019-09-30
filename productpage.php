@@ -64,14 +64,26 @@
 							<a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""></a>
 						</div>
 
-						<div>
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>
-								<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>
-										<p id="loginbutton" style="display: inline"> &nbspLogin</p>
-								</a></li>
-							</ul>
-						</div>
+<?php require('mysqlconnect.php');
+						echo '<div  style="margin-top: -20px">';
+							echo '<ul class="nav navbar-nav navbar-right">';
+								echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> &nbspSign Up</a></li>';
+
+								if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+								{
+									echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogout</p>';
+									echo '</a></li>';
+								}
+								else
+								{
+									echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>';
+										echo '<p id="loginbutton" style="display: inline"> &nbspLogin</p>';
+									echo '</a></li>';
+								}
+							echo '</ul>';
+						echo '</div>';
+?>
 
 						<div>
 						<form class="navbar-form navbar-right" action="/action_page.php">
