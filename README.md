@@ -213,4 +213,3 @@ mysql> describe credentials;
 | password  | varchar(30) | NO   |     | NULL    |       |
 +-----------+-------------+------+-----+---------+-------+
 4 rows in set (0.00 sec)
- 
