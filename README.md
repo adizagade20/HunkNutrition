@@ -1,3 +1,5 @@
+For formatted ReadME, open "README.md.pdf".
+
 At first you may say like the project is not working, please go through the below info.
 
 Create MySQL database using WorkBench with username and password as 'root'. If yours differ from this, please change the details in the file 'mysqlconnect.php' and then proceed to create the below tables. 
